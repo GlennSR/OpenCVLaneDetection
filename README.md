@@ -10,5 +10,5 @@ Final code of the project that identifies the two lanes (left and right) and plo
 ### Lane detection demo
 
 <p align="center">
-  <img width="400" height="300" src="">
+  <img width="600" height="400" src="lane_detection.gif">
 </p>
