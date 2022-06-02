@@ -121,7 +121,7 @@ def process(img):
     return lined_img
 
 
-image = cv2.imread('Figure.png')
+image = cv2.imread('Figure_1.png')
 global height, width
 height, width = image.shape[:2]
 image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)

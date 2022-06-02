@@ -39,19 +39,19 @@ def draw_lines(image, lines):
                 b = mc[1]
                 if a < 0:
                     # p1.append([line[0][0], line[0][1]])
-                    left_x1.append(np.int(np.float((y_min - b)) / np.float(a)))
-                    left_x2.append(np.int(np.float((y_max - b)) / np.float(a)))
+                    left_x1.append(np.int64(np.float64((y_min - b)) / np.float64(a)))
+                    left_x2.append(np.int64(np.float64((y_max - b)) / np.float64(a)))
                 elif a > 0:
                     # p2.append([line[0][2], line[0][3]])
-                    right_x1.append(np.int(np.float((y_min - b)) / np.float(a)))
-                    right_x2.append(np.int(np.float((y_max - b)) / np.float(a)))
+                    right_x1.append(np.int64(np.float64((y_min - b)) / np.float64(a)))
+                    right_x2.append(np.int64(np.float64((y_max - b)) / np.float64(a)))
 
         '''Verifies if the vectors are not empty'''
         if len(left_x1) and len(left_x2) and len(right_x1) and len(right_x2):
-            l_avg_x1 = np.int(np.nanmean(left_x1))
-            l_avg_x2 = np.int(np.nanmean(left_x2))
-            r_avg_x1 = np.int(np.nanmean(right_x1))
-            r_avg_x2 = np.int(np.nanmean(right_x2))
+            l_avg_x1 = np.int64(np.nanmean(left_x1))
+            l_avg_x2 = np.int64(np.nanmean(left_x2))
+            r_avg_x1 = np.int64(np.nanmean(right_x1))
+            r_avg_x2 = np.int64(np.nanmean(right_x2))
 
             # Draw the lines
             cv2.line(image, (l_avg_x1, y_min), (l_avg_x2, y_max), (255, 0, 0), thickness=6)
@@ -128,7 +128,7 @@ def process(img):
     return lined_img
 
 
-cap = cv2.VideoCapture('test.mp4') # If you want to connect your webcam just enter 0 in the function
+cap = cv2.VideoCapture('raw_video.mp4') # If you want to connect your webcam just enter 0 in the function
 
 while cap.isOpened():
     '''Main Programm'''
